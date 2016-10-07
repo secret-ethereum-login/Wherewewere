@@ -1,0 +1,24 @@
+navigate to front-end tools directory in terminal
+https://nodejs.org/en/download/
+install node.js
+run 'npm install' in terminal
+
+..make sure the node modules do not get committed... they are really big
+
+open gulpfile.js
+
+        host: 'what.local',  //your localhost
+        proxy: 'what.local', //your localhost again
+
+        change these to your localhost
+        run 'gulp' in your terminal
+
+        all terminal commands without quotes
+        gulp will automatically minify and compress javascript and convert sass into css
+
+        make changes only to front-end-tools/javascript/functions.js
+        and styling to styles/style.scss
+
+        run gulp gzip-tar to backup entire project.... this is saved into the backups folder
+
+        also this gulp instance has browser sync so will refresh the browser screen when changes are made
