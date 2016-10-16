@@ -1,7 +1,42 @@
 h2{
   text-align: center;
 
+
 }
 h2:hover{
   cursor: pointer;
+}
+
+
+
+
+body {
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.inputBox {
+  border-radius:5px;
+}
+#theHeader{
+  margin-top:5%;
+}
+.footer-basic{
+  width:100%;
+  background-color: grey;
+  height: 40px;
+text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.header-basic{
+  width:100%;
+  background-color: grey;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.body-basic{
+  margin-top:0%;
 }

@@ -56,6 +56,7 @@ gulp.task('browser-sync', ['sass'],  function() {
    gulp.watch('javascript/*.js', ['compress']); // Watches the javascript uglification function
     gulp.watch('styles/css/*.css').on('change', reload); //watch css and reload browser
     gulp.watch('javascript/production-javascript/*.js').on('change', reload); //reload on javascript uglification
+    gulp.watch('../WhereWeWere.proj/**/*.php').on('change', reload); //reload page on proj php file change
 
 
 });
