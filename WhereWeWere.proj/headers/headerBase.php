@@ -18,22 +18,31 @@
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="../../front-end-tools/styles/css/style.css">
+
 <!-- Latest compiled and minified CSS bootsrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="header-basic">
+<link rel="stylesheet" type="text/css" href="../../front-end-tools/styles/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Where We Were</title>
+</head>
+<div class="header-basic col-xs-12 col-sm-12 col-lg-12">
     This is the Header in headerBase.php ...includes the menu
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">We Were There</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/index">Home</a></li>
-                <li><a href="events/eventBase">Events</a></li>
-                <li><a href="events/createEvent">Create Event</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
-        </div>
-    </nav>
+    <span class="x"></span>
+    <span class="demo"></span>
+<!--    <nav class="navbar navbar-default col-xs-12 col-sm-12 col-lg-12">-->
+<!--        <div class="container-fluid">-->
+<!--            <div class="navbar-header ">-->
+<!--                <a class="navbar-brand" href="#">We Were There</a>-->
+<!--            </div>-->
+<!--            <ul class="nav navbar-nav col-xs-12 col-sm-12 col-lg-12">-->
+    <div class="navigation">
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/index">Home</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="events/eventBase">Events</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a  class="nav-link" href="events/createEvent">Create Event</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="#">Page 3</a></span>
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
+    </div>
 </div>
