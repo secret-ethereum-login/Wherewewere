@@ -5,6 +5,11 @@
      * Date: 10/15/2016
      * Time: 10:33 PM
      */
+    include_once ('curl/locationCurl.php');
+   $ip_address =  '173.18.171.228';//$_SERVER['REMOTE_ADDR'];
+   $user_info = curl_get_location($ip_address);
+    $city = $user_info['city'];
+
    include_once ('headers/headerBase.php');
     ?>
 <html>

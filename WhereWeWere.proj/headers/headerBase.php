@@ -29,7 +29,7 @@
 <div class="header-basic col-xs-12 col-sm-12 col-lg-12">
     This is the Header in headerBase.php ...includes the menu
     <span class="x"></span>
-    <span class="demo"></span>
+    <span class="location">||| Residents from <?php echo $city ?> are welcome to this event</span>
 <!--    <nav class="navbar navbar-default col-xs-12 col-sm-12 col-lg-12">-->
 <!--        <div class="container-fluid">-->
 <!--            <div class="navbar-header ">-->
