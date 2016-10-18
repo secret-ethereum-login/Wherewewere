@@ -37,9 +37,9 @@
 <!--            </div>-->
 <!--            <ul class="nav navbar-nav col-xs-12 col-sm-12 col-lg-12">-->
     <div class="navigation">
-                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/index">Home</a></span>
-                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="events/eventBase">Events</a></span>
-                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a  class="nav-link" href="events/createEvent">Create Event</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/WhereWeWere.proj/index">Home</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/WhereWeWere.proj/events/eventBase">Events</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a  class="nav-link" href="/WhereWeWere.proj/events/createEvent">Create Event</a></span>
                 <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="#">Page 3</a></span>
 <!--            </ul>-->
 <!--        </div>-->
