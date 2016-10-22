@@ -13,8 +13,27 @@ h2:hover{
 body {
 
   font-family: 'Open Sans', sans-serif;
+  background-image: url('https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg');
+  background-size: cover;
 }
-
+.center{
+  text-align: center;
+}
+.middle{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rounded{
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* future proofing */
+}
+.theContent{
+  color: white;
+background-color: darkgrey;
+  font-size: 120%;
+}
 .inputBox {
   border-radius:5px;
 }
@@ -28,6 +47,8 @@ body {
 text-align: center;
   color: white;
   font-weight: bold;
+  position: fixed;
+  bottom: 0px;
 //  position: absolute;
 //  bottom: 70px;
   //width: 200px;
@@ -54,7 +75,7 @@ margin-top:2%;
   margin-bottom:2%;
 }
 .nav-link{
-  background-color: lightgrey;
+  background-color: darkgrey;
   color:white;
   padding:2%;
   border: 2px ridge gray;
@@ -65,4 +86,21 @@ margin-top:2%;
   .theContent{
     margin-top:8%;
   }
+}
+.the-event-listing{
+  background-color: darkgrey;
+  margin-left: 5%;
+}
+.the-event-header{
+font-size: 150%;
+  color: white;
+  font-weight: bold;
+  border-bottom: 3px ridge white;
+}
+.the-event-links a{
+  color: #F5F5DC;
+  font-size: 120%;
+}
+.the-event-links:hover{
+  text-decoration: none;
 }

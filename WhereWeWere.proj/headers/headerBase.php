@@ -5,7 +5,11 @@
      * Date: 10/15/2016
      * Time: 10:36 PM
      */
+    include_once ('/../curl/locationCurl.php');
 
+    $ip_address =  $_SERVER['REMOTE_ADDR'];
+    $user_info = curl_get_location($ip_address);
+    $city = $user_info['city'];
     ?>
 <!--we want jquery for dom accessing-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -27,7 +31,7 @@
     <title>Where We Were</title>
 </head>
 <div class="header-basic col-xs-12 col-sm-12 col-lg-12">
-    This is the Header in headerBase.php ...includes the menu
+    <span class="site-title">WHERE WE WERE</span>
     <span class="x"></span>
     <span class="location">||| Residents from <?php echo $city ?> are welcome to this event</span>
 <!--    <nav class="navbar navbar-default col-xs-12 col-sm-12 col-lg-12">-->
