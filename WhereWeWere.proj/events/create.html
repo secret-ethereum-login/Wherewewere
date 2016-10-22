@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="indexstyle.css">
+</head>
+<body style="background-color:#CCC">
+<!-- On create we take all data for a new event then pass to new.php -->
+<table style="width:100%;height:600px;text-align:center">
+	<tr style="height:20%"></tr>
+	<tr>
+		<td>
+			<form action="index.php">
+					<input type="submit" value="Go Home" style="font:10px openSansReg;border-radius:5px;">
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<th style="font-size:20px"> MAKE AN EVENT! </br></th>
+	</tr>
+	<form method="get" action="new.php">
+	<tr>
+		<td>
+			<p>Title:</p>
+			<input class="inputBox" type="text" name="title">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>Description:</p>
+			<input class="inputBox" type="text" name="description">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>Place:</p>
+			<input class="inputBox" type="text" name="place">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>Date and Time:</p>
+			<input class="inputBox" type="text" name="date"> </br></br> 
+			<input class="inputBox" type="text" name="startTime">  to  
+			<input class="inputBox" type="text" name="endTime">
+		</td>
+	</tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<input class="inputBox" type="hidden" name="new" value="true">
+			</br></br><input type="submit" style="font:12px openSansReg" value="Create">
+		</td>
+	</tr>
+	</form>
+	<tr style="height:20%"></tr>
+</table>
+
+</body>
+</html>
