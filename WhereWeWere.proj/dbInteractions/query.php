@@ -20,3 +20,13 @@
         $event = mysqli_query($connections, "SELECT * FROM events where id = $id");
         return $event;
     }
+    function get_all_events_messages($connections, $eventid)
+    {
+        $eventMessages = mysqli_query($connections, "SELECT * FROM messages where eventId = $eventid");
+        return $eventMessages;
+    }
+    function get_a_user_for_a_message($connections, $userid)
+    {
+        $user  = mysqli_query($connections, "SELECT * FROM user where id = $userid");
+        return $user;
+    }

@@ -5,11 +5,7 @@
      * Date: 10/15/2016
      * Time: 10:36 PM
      */
-    include_once ('/../curl/locationCurl.php');
-
-    $ip_address =  $_SERVER['REMOTE_ADDR'];
-    $user_info = curl_get_location($ip_address);
-    $city = $user_info['city'];
+$city = $_COOKIE['city'];
     ?>
 <!--we want jquery for dom accessing-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -43,7 +39,7 @@
     <div class="navigation">
                 <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/WhereWeWere.proj/index.php">Home</a></span>
                 <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="/WhereWeWere.proj/events/eventBase.php">Events</a></span>
-                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a  class="nav-link" href="/WhereWeWere.proj/events/createEvent.php">Create Event</a></span>
+                <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a  class="nav-link" href="/WhereWeWere.proj/events/create.html">Create Event</a></span>
                 <span class="nav-item col-xs-6 col-sm-6 col-lg-3"><a class="nav-link" href="#">Page 3</a></span>
 <!--            </ul>-->
 <!--        </div>-->

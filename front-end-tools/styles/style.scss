@@ -104,3 +104,20 @@ font-size: 150%;
 .the-event-links:hover{
   text-decoration: none;
 }
+.single-event-listing{
+  background-color: darkgrey;
+  color:white;
+}
+.event-description{
+  border-bottom: 5px ridge lightgrey;
+  margin-bottom: 3%;
+  padding-bottom: 2%;
+}
+.event-title{
+  font-weight: bold;
+  font-size: 200%;
+}
+.event-messages{
+  color: white;
+  background-color: darkgrey;
+}

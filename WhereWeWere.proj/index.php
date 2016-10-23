@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /**
      * Created by PhpStorm.
      * User: Olaf Broms
@@ -10,9 +11,16 @@
     include_once ('environment/env.php');
     include_once ('dbInteractions/query.php');
 
-
-
+    $ip_address =  $_SERVER['REMOTE_ADDR'];
+    $user_info = curl_get_location($ip_address);
+    $city = $user_info['city'];
+    $cookie_name = "city";
+    $cookie_value = $city;
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
    include_once ('headers/headerBase.php');
+
+
+
     ?>
 <html>
 
@@ -47,8 +55,9 @@
                 foreach ($events as $event) {
                     $eventID = $event['id'];
                     $title = $event['title'];
-                    print "<a href='events/event.php?id=$eventID'>$title</a>";
-                    print "</br>";
+                    ?><a href="/WhereWeWere.proj/events/event.php?id=<?php echo $eventID ?>"><?php echo $title ?></a><br />
+                        <?php
+
                 }
             }
         ?>
