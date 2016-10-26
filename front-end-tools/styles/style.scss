@@ -120,4 +120,27 @@ font-size: 150%;
 .event-messages{
   color: white;
   background-color: darkgrey;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.single-message{
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+  border-bottom: 2px ridge lightgrey;
+}
+.insert-message-container{
+  margin-bottom: 10%;
+}
+.insert-message-header{
+  font-size: 150%;
+  font-weight: bold;
+  color: white;
+  margin-top:3%;
+}
+.insert-message-body{
+  color: black;
+  text-align: center;
+}
+#message-submit-button{
+  margin-top: 2%;
 }

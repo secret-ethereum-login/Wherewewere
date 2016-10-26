@@ -62,11 +62,17 @@
                                     <h2 class="col-xs-12 col-sm-12 col-lg-12 center">Messages :</h2>
                                     <?php
                                         foreach ($messages as $message) {
-                                            ?>
+                                            //format the incoming timestamp
+                                            $date = $message['date'];
+                                            $messageDate = date($date);
+                                            $day = date("F d, Y", strtotime("$messageDate"));
+                                            $time = date("H:i:s", strtotime("$messageDate"));
 
+                                            ?>
+                                            <div class="single-message col-xs-12 col-sm-12 col-lg-12">
                                             <div class="message-header col-xs-12 col-sm-12 col-lg-12">
                                                 <div
-                                                    class="message-date-time col-xs-4 col-sm-4 col-lg-4"><?php echo $message['date'] . ' - ' . $message['time']; ?></div>
+                                                    class="message-date-time col-xs-4 col-sm-4 col-lg-4"><?php echo $day . ' - ' . $time; ?></div>
                                                 <div class="message-user col-xs-8 col-sm-8 col-lg-8">
                                                     <?php
                                                         //get the user associated with the message
@@ -84,9 +90,14 @@
                                             <div class="message-body  col-xs-12 col-sm-12 col-lg-12">
                                                 <?php echo $message['message']; ?>
                                             </div>
+                                            </div>
                                             <?php
                                         }
+
                                     ?>
+                                </div>
+                                <div class="insert-new-message-container col-xs-12 col-sm-12 col-lg-12">
+                                    <?php include_once ('../messages/addMessage.php'); ?>
                                 </div>
                                 <?php
                             }
@@ -102,37 +113,6 @@
     <?php
 
 
-
-        //                    /* Submit message to specific event table if given */
-        //                    if (isset($_POST['sentMessage'])) {
-        //                        $table_name = "'$id'";
-        //                        $message = $_POST['sentMessage'];
-        //                        $stmt = $conn -> prepare(
-        //                            "INSERT INTO `$table_name`
-        //				VALUES(:message)");
-        //                        $stmt -> bindParam(':message', $message);
-        //                        $stmt -> execute();
-        //                    }
-        //
-        //                    /* Select all info from events table then put into variables */
-        //                    $qry = $conn -> prepare("SELECT * FROM `events` WHERE `id` LIKE :id");
-        //                    $qry -> bindParam('id', $id);
-        //                    $qry -> execute();
-        //                    $eventInfo = $qry -> fetchAll();
-        //                    $eventInfo = $eventInfo[0];
-        //
-        //                    $title = $eventInfo['Title'];
-        //                    $description = $eventInfo['Description'];
-        //                    $place = $eventInfo['Place'];
-        //                    $date = $eventInfo['Date'];
-        //                    $times = $eventInfo['Times'];
-        //
-        //                    // Create a new table for the event's messages
-        //                    $qry = $conn -> prepare("SELECT `message`
-        //			FROM `:eventID`");
-        //                    $qry -> bindParam(':eventID', $id);
-        //                    $qry -> execute();
-        //                    $messages = $qry -> fetchAll();
     ?>
     </body>
     </html>
