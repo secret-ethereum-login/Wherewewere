@@ -54,24 +54,24 @@ gulp.task('browser-sync', ['sass'],  function() {
         // }
     });
 
-    gulp.watch('../*.html').on('change', reload); //watch html in base directory and reload browser
-    gulp.watch('styles/*.scss', ['sass']); // Watches the sass function
-   gulp.watch('javascript/*.js', ['compress']); // Watches the javascript uglification function
-    gulp.watch('styles/css/*.css').on('change', reload); //watch css and reload browser
-    gulp.watch('javascript/production-javascript/*.js').on('change', reload); //reload on javascript uglification
-    gulp.watch('../WhereWeWere.proj/**/*.php').on('change', reload); //reload page on proj php file change
-    gulp.watch('../WhereWeWere.proj/**/*.php',  ['codecept']);
+    gulp.watch('*.html').on('change', reload); //watch html in base directory and reload browser
+    gulp.watch('front-end-tools/styles/*.scss', ['sass']); // Watches the sass function
+   gulp.watch('front-end-tools/javascript/*.js', ['compress']); // Watches the javascript uglification function
+    gulp.watch('front-end-tools/styles/css/*.css').on('change', reload); //watch css and reload browser
+    gulp.watch('front-end-tools/javascript/production-javascript/*.js').on('change', reload); //reload on javascript uglification
+    gulp.watch('WhereWeWere.proj/**/*.php').on('change', reload); //reload page on proj php file change
+    gulp.watch('WhereWeWere.proj/**/*.php',  ['codecept']);
 
 
 });
 
 //this is the new task....target properly
 gulp.task('sass', function () {
-    gulp.src('styles/*.scss')
+    gulp.src('front-end-tools/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(minifycss())
         .pipe(size())
-        .pipe(gulp.dest('styles/css/'))
+        .pipe(gulp.dest('front-end-tools/styles/css/'))
         .on('end', function(){ util.log('Sass is now Compiled!!!!'); });
 
 });
@@ -91,8 +91,8 @@ gulp.task('sass', function () {
 // });
 
 
-var jsFiles = 'javascript/*.js',
-    jsDest = 'javascript/production-javascript';
+var jsFiles = 'front-end-tools/javascript/*.js',
+    jsDest = 'front-end-tools/javascript/production-javascript';
 
 gulp.task('compress', function() {
     return gulp.src(jsFiles)
@@ -106,11 +106,11 @@ gulp.task('compress', function() {
 
 //zips and backs up entire project into the backups directory MUST BE RUN MANUALLY
 gulp.task('gzip-tar', function () {
-    gulp.src('../*')
+    gulp.src('*')
         .pipe(tar('archive.tar'))
         .pipe(gzip())
         .pipe(size())
-        .pipe(gulp.dest('backups'))
+        .pipe(gulp.dest('front-end-tools/backups'))
 });
 
 //html validator HAS NOT BEEN IMPLEMENTED YET
@@ -123,7 +123,7 @@ gulp.task('w3cjs', function () {
 
 gulp.task('codecept', function() {
     var options = {debug: false, flags: '--silent --report'};
-    gulp.src('../tests/*.php').pipe(codecept('codecept',options))
+    gulp.src('tests/*.php').pipe(codecept('codecept',options))
         .pipe(notify(notification('pass', 'CodeCeption Testing is Complete')));
 });
 
@@ -131,7 +131,7 @@ gulp.task('codecept', function() {
 function notification(status, message)
 {
     var options = {
-        icon: __dirname + '/node_modules/gulp-codeception/assets/test-' + status + '.png'
+        icon: __dirname + 'node_modules/gulp-codeception/assets/test-' + status + '.png'
     };
     options = _.merge(options);
     return options;
