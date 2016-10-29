@@ -4,9 +4,7 @@
   "description": "npm depends",
   "main": "index.js",
   "scripts": {
-//    "test": "echo \"Error: no test specified\" && exit 1",
-//    "lint": "jshint .",
-//    "validate": "npm ls",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "validate": "gulp validate"
   },
   "author": "olaf",
@@ -14,7 +12,6 @@
   "devDependencies": {
     "browser-sync": "^2.17.0",
     "del": "^2.2.1",
-    "git-guppy": "^1.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-codeception": "^0.5.0",
@@ -35,7 +32,6 @@
     "gulp-util": "^3.0.7",
     "gulp-w3cjs": "^1.2.0",
     "gulp-wrapper": "^1.0.0",
-    "guppy-pre-commit": "^0.4.0",
     "jquery": "^3.1.1",
     "jshint": "^2.9.2",
     "lodash": "^4.16.4",
