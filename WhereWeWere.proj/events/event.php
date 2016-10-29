@@ -9,6 +9,7 @@
     include_once ('../dbInteractions/connection.php');
     include_once ('../dbInteractions/query.php');
     include_once ('../environment/env.php');
+    //include_once ('../messages/message-submit.php');
 
 ?>
     <!DOCTYPE html>
@@ -97,7 +98,14 @@
                                     ?>
                                 </div>
                                 <div class="insert-new-message-container col-xs-12 col-sm-12 col-lg-12">
+                                    <div class="insert-message-container col-xs-12 col-sm-12 col-lg-12">
+                                        <div class="insert-message-header col-xs-12 col-sm-12 col-lg-12 center">
+                                            POST NEW MESSAGE
+                                        </div>
+                                        <form action="../messages/message-submit.php" method="post">
                                     <?php include_once ('../messages/addMessage.php'); ?>
+                                        </form>
+                                    </div>
                                 </div>
                                 <?php
                             }

@@ -10,25 +10,22 @@
     $id = $_GET['id'];
 
     ?>
-<div class="insert-message-container col-xs-12 col-sm-12 col-lg-12">
-    <div class="insert-message-header col-xs-12 col-sm-12 col-lg-12 center">
-        POST NEW MESSAGE
-    </div>
+
     <div class="insert-message-body col-xs-12 col-sm-12 col-lg-12">
-        <form action="message-submit.php">
+
         <div class="insert-message-name col-xs-12 col-sm-12 col-lg-12">
-            <input type="text" id="new-message-name" placeholder="Enter Name">
+            <input type="text" id="new-message-name" name="new-message-name" placeholder="Enter Name">
         </div>
         <div class="insert-message-message col-xs-12 col-sm-12 col-lg-12">
-            <input type="text" id="new-message-message" placeholder="Enter Message">
-            <input type="hidden" id="new-message-date" value="<?php echo $today; ?>">
-            <input type="hidden" id="new-message-eventid" value="<?php echo $id; ?>">
+            <input type="text" id="new-message-message" name="new-message-message" placeholder="Enter Message">
+            <input type="hidden" id="new-message-date" name="new-message-date" value="<?php echo $today; ?>">
+            <input type="hidden" id="new-message-eventid" name="new-message-eventid" value="<?php echo $id; ?>">
 
         </div>
             <button type="submit" id="message-submit-button" class="btn-primary">Add Message</button>
-        </form>
+
     </div>
-</div>
+
 
 <?php
     //                    /* Submit message to specific event table if given */
