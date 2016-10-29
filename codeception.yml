@@ -5,13 +5,15 @@ paths:
     data: tests/_data
     support: tests/_support
     envs: tests/_envs
+    helpers: tests/_support/Helper
 settings:
     bootstrap: _bootstrap.php
     colors: false
     memory_limit: 1024M
 extensions:
-    enabled:
-        - Codeception\Extension\RunFailed
+   # enabled:
+#disabled:
+ #       - Codeception\Extension\RunFailed
 modules:
     config:
         Db:
