@@ -19,7 +19,7 @@ var gulp         = require('gulp'),
     gzip = require('gulp-gzip'),
     codecept = require('gulp-codeception'),
     notify   = require('gulp-notify'),
-  guppy = require('git-guppy'),
+  guppy = require('git-guppy')(gulp),
     _ = require('lodash'),
     pump = require('pump');
     log = util.log,
@@ -114,6 +114,12 @@ gulp.task('gzip-tar', function () {
         .pipe(gulp.dest('front-end-tools/backups'))
 });
 
+gulp.task('create-git-hooks', function()
+{
+    gulp.src('front-end-tools/hooks/pre-commit')
+       .pipe(gulp.dest('.git/hooks/'))
+});
+
 //html validator HAS NOT BEEN IMPLEMENTED YET
 gulp.task('w3cjs', function () {
     gulp.src('')
@@ -139,6 +145,8 @@ function notification(status, message)
 }
 
 gulp.task('pre-commit', ['codecept']);
+
+
 
 
 

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+CODECEPTION_CHECK=1
+SELF_DIR=$( pwd )
+
+echo "Checking staged changes..."
+
+# Run Codeception tests
+if [ "$CODECEPTION_CHECK" == 1 ]; then
+	if [ -f "$SELF_DIR/codeception.yml" ]; then
+	echo "Codception is configured ... running tests ...."
+	#exec ./vendor/bin/codecept run
+	exec codecept run
+		#exec vassh wp codeception run
+		#exec vassh wp codecept run
+		if [ $RETVAL -ne 0 ]; then
+			exit 1
+		fi
+	else
+		echo "Codeception is not configured!"
+	fi
+fi
