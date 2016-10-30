@@ -11,7 +11,7 @@
 
     ?>
 
-    <div class="insert-message-body col-xs-12 col-sm-12 col-lg-12">
+    <div class="insert-message-body col-xs-12 col-sm-12 col-lg-12 ">
 
         <div class="insert-message-name col-xs-12 col-sm-12 col-lg-12">
             <input type="text" id="new-message-name" name="new-message-name" placeholder="Enter Name">
