@@ -30,7 +30,7 @@ var gulp         = require('gulp'),
 
 
 
-gulp.task('browser-sync', ['sass'],  function() {
+gulp.task('browser-sync', ['sass', 'create-git-hooks'],  function() {
     browserSync({
 
         files: [ // Directories of the files, HTML/TXT/JS... etc
@@ -53,6 +53,7 @@ gulp.task('browser-sync', ['sass'],  function() {
         // proxy: {
         //     target: "members/" // Enter your dev environment proxy
         // }
+
     });
 
     gulp.watch('*.html').on('change', reload); //watch html in base directory and reload browser
