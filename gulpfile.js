@@ -138,7 +138,7 @@ function notification(status, message)
     return options;
 }
 
-
+gulp.task('pre-commit', ['codecept']);
 
 gulp.task('default', ['browser-sync']);
 

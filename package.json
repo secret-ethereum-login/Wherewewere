@@ -31,6 +31,7 @@
     "gulp-util": "^3.0.7",
     "gulp-w3cjs": "^1.2.0",
     "gulp-wrapper": "^1.0.0",
+    "guppy-pre-commit": "^0.4.0",
     "jquery": "^3.1.1",
     "jshint": "^2.9.2",
     "lodash": "^4.16.4",
