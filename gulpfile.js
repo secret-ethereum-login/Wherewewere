@@ -19,7 +19,7 @@ var gulp         = require('gulp'),
     gzip = require('gulp-gzip'),
     codecept = require('gulp-codeception'),
     notify   = require('gulp-notify'),
- // guppy = require('git-guppy'),
+  guppy = require('git-guppy'),
     _ = require('lodash'),
     pump = require('pump');
     log = util.log,
@@ -139,6 +139,9 @@ function notification(status, message)
 }
 
 gulp.task('pre-commit', ['codecept']);
+
+
+
 
 gulp.task('default', ['browser-sync']);
 
